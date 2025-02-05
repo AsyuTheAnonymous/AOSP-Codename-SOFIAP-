@@ -1,0 +1,46 @@
+Requirements:
+
+Stock Firmware (Choose your sim carriers folder):
+https://mirrors-obs-1.lolinet.com/firmware/lenomola/2020/sofiap/
+
+MotoFlash Pro (XDA Forums):
+https://xdaforums.com/t/utility-motoflashpro.4252201/
+
+ADB & Fastboot:
+Windows: https://dl.google.com/android/repository/platform-tools-latest-windows.zip
+Linux: https://dl.google.com/android/repository/platform-tools-latest-linux.zip
+MacOS: https://dl.google.com/android/repository/platform-tools-latest-darwin.zip
+
+Add adb into your PATH environment variable (IF NEEDED):
+https://medium.com/@yadav-ajay/a-step-by-step-guide-to-setting-up-adb-path-on-windows-0b833faebf18
+
+Recovery (IF BRICKED):
+https://en-us.support.motorola.com/app/softwarefix
+
+USB Type C: Yes
+---------------------------------------------------------------------------------------------------------------------
+
+Quick Note: I have struggled to find a working TWRP recovery file that works reliably for android 11, if you are in 
+the same situation as me and your device will not let you downgrade this method should work.
+
+-- We will not use TWRP instead we will use fastbootd.
+
+If your device is "bricked" then use the recovery tool to reinstall your phones OS.
+-- Please note that you need to have you base operating system installed and operational before you install AOSP, 
+your phone model creates files that will be useful and required in the install of AOSP
+
+
+Step 1: 
+Verify ADB: Open CMD/Terminal
+Command:
+-- fastboot devices
+Output should be your device if you dont see anything make sure ADB is recognized by your system PATH,
+if you do see a string of characters proceed!
+
+Step 2:
+Wipe device (Required dependencies will not be erased):
+Command:
+-- fastboot -w
+
+
+If your device is "bricked" then use the recovery tool to reinstall your phones OS.
