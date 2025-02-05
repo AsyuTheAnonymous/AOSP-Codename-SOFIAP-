@@ -42,5 +42,19 @@ Wipe device (Required dependencies will not be erased):
 Command:
 -- fastboot -w
 
+Step 3:
+Navigate to the directory you downloaded AOSP 13
+-- fastboot update <package_name>
+replace "<package_name>" with the AOSP 13 zip file
+-- Do note this command will likely fail and reboot you into fastbootd, dont worry this is good we can proceed in there.
+
+Example error:
+FAILED (remote: 'Old partitions are not compatible with the new super layout; wipe needed')
+
+READ ME!!!
+-- This just means you need to mount the iso files inside of the AOSP 13 zip, its in your best interest to unzip it and cd into it now!
+
+Step 4:
+Flash the iso files to the 
 
 If your device is "bricked" then use the recovery tool to reinstall your phones OS.
